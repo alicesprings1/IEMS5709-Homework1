@@ -28,6 +28,7 @@ public class CommonFolloweeDriver3 {
 
         FileInputFormat.setInputPaths(job,new Path(args[0]));
         FileOutputFormat.setOutputPath(job,new Path(args[1]));
+        FileOutputFormat.setOutputPath(job,new Path("/user/s1155164941/output-"+System.currentTimeMillis()));
         System.exit(job.waitForCompletion(true)?0:1);
     }
 }
